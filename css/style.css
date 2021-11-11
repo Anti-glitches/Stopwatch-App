@@ -203,3 +203,42 @@ p > span{
     cursor: pointer;
 }
 
+/* side logo fixed thingy */
+.side-logo{
+    width: 50px;
+    height: 50px;
+    background-color: #4b6af4;
+    position: fixed;
+    right: 0;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 0 0 5px;
+    transition: width 0.1s ease-out;
+}
+
+.side-logo p{
+    display: none;
+    text-align: center;
+    color: white;
+}
+
+.side-logo:hover p{
+    display: block;
+    font-size: 0.8rem;
+}
+
+.side-logo:hover{
+    width: 110px;
+}
+
+.side-logo:hover .fa-space-shuttle{
+    margin-left: 5px;
+}
+
+.fa-space-shuttle{
+    font-size: 2em;
+    transform: rotate(-90deg);
+    color: #F4D54B;
+}
