@@ -234,14 +234,14 @@ p > span{
     width: 110px;
 }
 
-.side-logo:hover .fa-space-shuttle{
+.side-logo:hover .fa-cat{
     margin-left: 5px;
     color: white;
 }
 
-.fa-space-shuttle{
+.fa-cat{
     font-size: 2em;
-    transform: rotate(-90deg);
+    /* transform: rotate(-90deg); */
     color: #F4D54B;
 }
 
