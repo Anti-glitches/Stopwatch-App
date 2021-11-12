@@ -4,6 +4,7 @@ body{
     font-family: 'Roboto Mono', monospace;
     display: flex;
     justify-content: center;
+    overflow-y: scroll;
 }
 
 #container{
@@ -235,10 +236,27 @@ p > span{
 
 .side-logo:hover .fa-space-shuttle{
     margin-left: 5px;
+    color: white;
 }
 
 .fa-space-shuttle{
     font-size: 2em;
     transform: rotate(-90deg);
     color: #F4D54B;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #4b6af4;
 }
