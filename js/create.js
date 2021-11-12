@@ -8,41 +8,47 @@ let count = 0;
 
 export function createBox(){
     const accordianItem = document.createElement('div');
-    const inputValue = document.querySelector('#inputText').value;
+    const input = document.querySelector('#inputText');
 
-    accordianItem.classList.add('accordian-item');
+    if(input.value.length === 0){
+        errMsg.innerHTML = "Your stopwatch begs you to give it a name as it cries in despair. &#128557"
+    } else{
+        errMsg.innerHTML = ""
 
-    accordianItem.innerHTML = `
-            <div class="accordian-item-head">
-                <div class="item-head-display">
-                    <h1>${inputValue}</h1>
-                    <p>time saved: <span class='saved savedDisplay${count}'>00:00:00</span> <span class="circle"></p> 
-                </div>
-                <div class="item-head-toggle">
-                    <i class="fas fa-caret-down item-head-arrow"></i>
-                    <p>open</p>  
-                </div>    
-            </div>
-            <div class="accordian-item-body">
-                <div class="item-body-stopwatch">
-                    <span class='display display${count}'>00:00:00</span>
-                    <div class="stopwatch-buttons">
-                        <button class='playPauseButton playPause${count}'>start</button>
-                        <button class='resetButton reset${count}'>save</button>
+
+        accordianItem.classList.add('accordian-item');
+
+        accordianItem.innerHTML = `
+                <div class="accordian-item-head">
+                    <div class="item-head-display">
+                        <h1>${input.value}</h1>
+                        <p>time saved: <span class='saved savedDisplay${count}'>00:00:00</span> <span class="circle"></p> 
                     </div>
+                    <div class="item-head-toggle">
+                        <i class="fas fa-caret-down item-head-arrow"></i>
+                        <p>open</p>  
+                    </div>    
                 </div>
-                <div class="item-body-textarea">
-                    <textarea name="" id="" cols="45" rows="9" placeholder="Write some notes here"></textarea>
-                </div>
-                <div class="delete">
-                    <i title="Please don't delete me"class="fas fa-trash delete-icon delete${count}"></i>
-                </div>
-            </div>
-`
-        
-    container.prepend(accordianItem)
+                <div class="accordian-item-body">
+                    <div class="item-body-stopwatch">
+                        <span class='display display${count}'>00:00:00</span>
+                        <div class="stopwatch-buttons">
+                            <button class='playPauseButton playPause${count}'>start</button>
+                            <button class='resetButton reset${count}'>save</button>
+                        </div>
+                    </div>
+                    <div class="item-body-textarea">
+                        <textarea name="" id="" cols="45" rows="9" placeholder="Write some notes here"></textarea>
+                    </div>
+                    <div class="delete">
+                        <i title="Please don't delete me"class="fas fa-trash delete-icon delete${count}"></i>
+                    </div>
+                </div>`
+            
+        container.prepend(accordianItem)
 
-    allStuff()
+        allStuff()
+    }
 }
 
 function stopwatch(playPauseNum, resetNum, displayNum, savedDisplayNum){
