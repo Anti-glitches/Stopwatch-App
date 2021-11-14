@@ -347,6 +347,7 @@ background: #4b6af4;
     #heading{
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     #heading #title-logo{
