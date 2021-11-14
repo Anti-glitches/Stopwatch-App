@@ -30,15 +30,17 @@ export function createBox(){
                     </div>    
                 </div>
                 <div class="accordian-item-body">
-                    <div class="item-body-stopwatch">
-                        <span class='display display${count}'>00:00:00</span>
-                        <div class="stopwatch-buttons">
-                            <button class='playPauseButton playPause${count}'>start</button>
-                            <button class='resetButton reset${count}'>save</button>
+                    <div class="accordian-body-display">
+                        <div class="item-body-stopwatch">
+                            <span class='display display${count}'>00:00:00</span>
+                            <div class="stopwatch-buttons">
+                                <button class='playPauseButton playPause${count}'>start</button>
+                                <button class='resetButton reset${count}'>save</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="item-body-textarea">
-                        <textarea name="" id="" cols="45" rows="9" placeholder="Write some notes here"></textarea>
+                        <div class="item-body-textarea">
+                            <textarea name="" id="" cols="45" rows="9" placeholder="Write some notes here"></textarea>
+                        </div>
                     </div>
                     <div class="delete">
                         <i title="Please don't delete me"class="fas fa-trash delete-icon delete${count}"></i>

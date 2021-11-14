@@ -12,13 +12,16 @@
 </head>
 <body>
     <div id="container">
-        <div class="input-container">
+        <div id="input-container">
             <div id="heading">
                 <p id="title-logo">Stopwatch app</p>
                 <p id="totalSavedPrg">total time saved: <span id="totalSaved">00:00:00</span> </p>  
             </div>
-            <input id='inputText' type="text" maxlength ="25" placeholder="Enter something" required="required">
-            <button id="generate">generate</button>
+            <div id="input-generate-container">
+                <input id='inputText' type="text" maxlength ="25" placeholder="Enter something" required="required">
+                <button id="generate">generate</button>
+            </div>
+            
             <p id="errMsg"></p>         
         </div>
         <div class="module-container">
