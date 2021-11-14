@@ -71,6 +71,11 @@ div#heading{
     align-items: center;
 }
 
+#errMsg{
+    font-size: 0.8rem;
+    
+}
+
 
 /* accordian container */
 
